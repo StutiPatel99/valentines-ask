@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap");
+    </style>
+
+    <title>Valentine's ask</title>
+  </head>
+  <body>
+    <!--Envelope screen-->
+
+    <div id="envelope-container">
+      <p>
+        I see you marching toward the mountains like <i>that</i> penguin 👀 Want
+        some company on the journey? 🐧
+      </p>
+      <img src="letter.jpg" alt="Envelope" id="envelope" />
+    </div>
+    <!-- Letter screen-->
+    <div id="letter-container">
+      <div class="letter-window">
+        <h1 id="letter-title">Will you be my Valentine?</h1>
+
+        <img
+          src="790591dc5125b195210c1fc858a10353.gif"
+          class="cat"
+          id="letter-cat"
+          style="width: 400px"
+        />
+
+        <div class="buttons" id="letter-buttons">
+          <img src="yes.png" class="btn button-yes" alt="Yes" />
+          <div class="no-wrapper">
+            <img src="no.png" class="btn button-no" alt="No" />
+          </div>
+        </div>
+        <div id="final-text" class="final-text" style="display: none">
+          <div class="question">
+            Before hitting the mountains, What do you feel like doing? 💖
+          </div>
+          <div class="options">
+            <label>
+              <input type="checkbox" name="plan" value="LeetCode Date Night" />
+              LeetCode Date Night
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="plan"
+                value="Build a Tiny Useless Project Together"
+              />
+              Build a Tiny Project Together
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="plan"
+                value="Study Date ft. Indian YouTubers"
+              />
+              Study Date ft. Indian YouTubers
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                name="plan"
+                value="Explore System Design of ChatGPT"
+              />
+              Explore System Design
+            </label>
+          </div>
+          <button id="confirm-date">Done</button>
+        </div>
+        <div id="confirm-text" class="confirm-text" style="display: none">
+          <h2>Date confirmed 💕 See you on 14<sup>th</sup>, Can't Wait! 😊</h2>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
