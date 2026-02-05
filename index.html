@@ -77,16 +77,40 @@
                 name="plan"
                 value="Explore System Design of ChatGPT"
               />
-              Explore System Design
+              Explore System Design of ChatGPT
             </label>
           </div>
           <button id="confirm-date">Done</button>
         </div>
         <div id="confirm-text" class="confirm-text" style="display: none">
-          <h2>Date confirmed 💕 See you on 14<sup>th</sup>, Can't Wait! 😊</h2>
+          <h1>Date confirmed 💕 See you on 14<sup>th</sup>, Can't Wait!😊</h1>
         </div>
       </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+      const supabaseUrl = "https://vmlvcpvozfgompsrserd.supabase.co";
+      const supabaseAnonKey =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZtbHZjcHZvemZnb21wc3JzZXJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAwOTE3MjEsImV4cCI6MjA4NTY2NzcyMX0.xlH0crdNvKYLpagszTmMneRIQN4Gsj8FHyH55pOMyTM";
+
+      window.supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
+    </script>
+
     <script src="script.js"></script>
+    <footer
+      style="
+        position: fixed;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        color: #888;
+        font-family: &quot;The Girl Next Door&quot;, cursive;
+        opacity: 0.7;
+      "
+    >
+      © 2026 Created with 💕 Stuti
+    </footer>
   </body>
 </html>

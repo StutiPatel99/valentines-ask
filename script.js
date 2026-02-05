@@ -56,19 +56,60 @@ btnYes.addEventListener("click", () => {
   finalText.style.display = "block";
 });
 
-// Confirm date clickec
-confirmDate.addEventListener("click", () => {
-  console.log("confirm date clicked");
+// Confirm date clicked
+// confirmDate.addEventListener("click", () => {
+//   console.log("confirm date clicked");
+//   console.log("supabase:", supabase);
 
-  const plan = document.querySelector('input[name="plan"]:checked');
-  if (!plan) {
+//   const plan = document.querySelector('input[name="plan"]:checked');
+//   if (!plan) {
+//     alert("Pick what we’re going to do, Cutie! 💕");
+//     return;
+//   }
+//   selectedPlan = plan.value;
+//   console.log(plan.value);
+//   //   confirmText.src = "lastImages.gif";
+//   letterTitle.style.display = "none";
+
+//   finalText.style.display = "none";
+//   confirmText.style.display = "block";
+//   letterCat.src = "lastImages.gif";
+//   console.log("Saved successfully 💕: ", data);
+// });
+
+confirmDate.addEventListener("click", async () => {
+  console.log("confirm date clicked");
+  console.log("supabase:", supabase);
+
+  const selectedPlans = Array.from(
+    document.querySelectorAll('input[name="plan"]:checked'),
+  ).map((checkbox) => checkbox.value);
+
+  if (selectedPlans.length === 0) {
     alert("Pick what we’re going to do, Cutie! 💕");
     return;
   }
-  selectedPlan = plan.value;
-  console.log(plan.value);
 
+  console.log("Selected plans:", selectedPlans);
+
+  // 🔥 ACTUAL SUPABASE INSERT
+  const { data, error } = await supabase.from("date_choices").insert([
+    {
+      selected_plans: selectedPlans,
+    },
+  ]);
+
+  if (error) {
+    console.error("Supabase insert failed:", error);
+    alert("Something went wrong 🥺");
+    return;
+  }
+
+  console.log("Saved successfully 💕:", data);
+
+  // UI updates AFTER successful save
+  letterTitle.style.display = "none";
   finalText.style.display = "none";
-
   confirmText.style.display = "block";
+  letterCat.src = "lastImages.gif";
 });
