@@ -44,7 +44,7 @@ On confirmation:
 
 - Selected options are saved to Supabase
 - A sweet confirmation message appears 💕
-- 
+
 🧠 Supabase Setup (Optional)
 This project uses Supabase to store selected date ideas.
 Table: date_choices
