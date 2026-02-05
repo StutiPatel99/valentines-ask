@@ -61,7 +61,7 @@ Row Level Security (RLS)
 Environment variables
 Backend proxy or Edge Functions
 🌐 Live Demo
-(https://penguin-valentines.netlify.app/)]
+https://penguin-valentines.netlify.app/
 
 Shared with your Valentine's ask them out in a special way!
 
