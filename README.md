@@ -22,13 +22,6 @@ The No button tries… but the Yes button always wins 😉
 - Vanilla JavaScript
 - Supabase (Database + JS SDK)
 - Google Fonts – The Girl Next Door
-📂 Project Structure
-valentines-ask/
-├── index.html        # Main HTML structure
-├── style.css         # Styling and animations
-├── script.js         # Interaction logic + Supabase calls
-├── assets/           # Images, GIFs (cats, envelope, buttons, etc.)
-└── README.md
 
 🚀 How It Works
 
